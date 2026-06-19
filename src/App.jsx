@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FiSun, FiMoon, FiExternalLink, FiMail, FiPhone } from 'react-icons/fi';
+import { FiSun, FiMoon, FiExternalLink, FiMail, FiPhone, FiMenu, FiX } from 'react-icons/fi';
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaBook } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiJavascript, SiPython, SiReact, SiNodedotjs, SiTailwindcss, SiMongodb } from 'react-icons/si';
@@ -9,8 +9,8 @@ import './skills.css';
 
 function App() {
   const [theme, setTheme] = useState('dark');
-
   const [activeSection, setActiveSection] = useState('intro');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -42,16 +42,32 @@ function App() {
     setTheme(newTheme);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <div className="app-container">
-      <aside className="sidebar">
+      {/* Mobile Top Bar */}
+      <div className="mobile-top-bar">
+        <div className="mobile-logo">AN</div>
+        <button className="hamburger-btn" onClick={toggleMobileMenu} aria-label="Toggle Menu">
+          {isMobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+        </button>
+      </div>
+
+      <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-content">
           <nav className="sidebar-nav">
-            <a href="#intro" className={`nav-item ${activeSection === 'intro' ? 'active' : ''}`} onClick={() => setActiveSection('intro')}>AN</a>
-            <a href="#skills" className={`nav-item ${activeSection === 'skills' ? 'active' : ''}`} onClick={() => setActiveSection('skills')}>SKILLS</a>
-            <a href="#projects" className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`} onClick={() => setActiveSection('projects')}>PROJECTS</a>
-            <a href="#about" className={`nav-item ${activeSection === 'about' ? 'active' : ''}`} onClick={() => setActiveSection('about')}>ABOUT</a>
-            <a href="#contact" className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => setActiveSection('contact')}>CONTACT</a>
+            <a href="#intro" className={`nav-item ${activeSection === 'intro' ? 'active' : ''}`} onClick={() => { setActiveSection('intro'); closeMobileMenu(); }}>AN</a>
+            <a href="#skills" className={`nav-item ${activeSection === 'skills' ? 'active' : ''}`} onClick={() => { setActiveSection('skills'); closeMobileMenu(); }}>SKILLS</a>
+            <a href="#projects" className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`} onClick={() => { setActiveSection('projects'); closeMobileMenu(); }}>PROJECTS</a>
+            <a href="#about" className={`nav-item ${activeSection === 'about' ? 'active' : ''}`} onClick={() => { setActiveSection('about'); closeMobileMenu(); }}>ABOUT</a>
+            <a href="#contact" className={`nav-item ${activeSection === 'contact' ? 'active' : ''}`} onClick={() => { setActiveSection('contact'); closeMobileMenu(); }}>CONTACT</a>
           </nav>
 
           <div className="theme-toggle">

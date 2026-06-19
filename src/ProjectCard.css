@@ -71,3 +71,16 @@ Wait, if border-color in dark mode is #CECECE, it will transition to #CECECE, wh
   line-height: 1.5;
   opacity: 0.9;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+    height: 385px; /* scale down height roughly proportional */
+  }
+
+  .card-content {
+    padding: 2rem 1.5rem;
+  }
+}
