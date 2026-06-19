@@ -1,0 +1,78 @@
+/* Skills Section */
+.skills-section {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--border-color); /* Light grey in dark mode */
+  color: var(--bg-color); /* Black in dark mode */
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+  display: flex;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.marquee-group {
+  display: flex;
+  gap: 3rem;
+  padding-right: 3rem; /* Same as gap to maintain distance with the next group */
+}
+
+/* We shift exactly -50% because there are exactly 2 equal groups */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+}
+
+.skill-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.1rem;
+  width: 250px; /* Fixed width for horizontal alignment */
+  flex-shrink: 0;
+}
+
+.skill-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.text-items {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.1rem;
+}
