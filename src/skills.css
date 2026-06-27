@@ -71,32 +71,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
   cursor: default;
 }
 
 .skill-icon-item > svg,
 .skill-img-icon {
   transition: all 0.3s ease;
-  filter: grayscale(1) opacity(0.8);
   transform: scale(1);
 }
 
 .skill-icon-item > svg.pandas-icon {
-  filter: grayscale(1) brightness(1.6) opacity(0.8);
+  filter: brightness(1.6);
 }
 
 .skill-icon-item:hover > svg,
 .skill-icon-item:hover .skill-img-icon {
-  filter: grayscale(0) opacity(1);
   transform: scale(1.15);
 }
 
-.skill-icon-item:hover > svg.pandas-icon {
-  filter: grayscale(0) brightness(1.6) opacity(1);
-}
-
 .skill-icon-item > span {
+  position: absolute;
+  top: 100%;
+  margin-top: 0.5rem;
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 600;
@@ -105,7 +105,9 @@
   transform: translateY(4px);
   white-space: nowrap;
   transition: all 0.3s ease;
+  z-index: 10;
 }
+
 
 .skill-icon-item:hover > span {
   opacity: 1;

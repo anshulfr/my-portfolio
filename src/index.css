@@ -3,7 +3,7 @@
   --text-color: #2A2A2A;
   --border-color: #2A2A2A;
   --border-secondary: #C8C4BC;
-  --accent-primary: #D4855A;
+  --accent-primary: #2A9D8F;
   --accent-secondary: #4A9B8E;
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -16,7 +16,7 @@
   --text-color: #E8E4DC;
   --border-color: #C8C4BC;
   --border-secondary: #3A3F4A;
-  --accent-primary: #D4855A;
+  --accent-primary: #2A9D8F;
   --accent-secondary: #4A9B8E;
   --dot-color: rgba(255, 255, 255, 0.12);
 }
@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
@@ -474,7 +475,7 @@ a {
 .intro-title {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 5rem;
+  font-size: 80px;
   margin-bottom: 3rem;
   letter-spacing: -2px;
 }
@@ -612,7 +613,7 @@ a {
 
   /* Intro section mobile */
   .intro-title {
-    font-size: 3.5rem;
+    font-size: 56px;
   }
 
   .intro-description {
@@ -666,7 +667,7 @@ a {
 
 @media (max-width: 600px) {
   .intro-title {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .quick-link {

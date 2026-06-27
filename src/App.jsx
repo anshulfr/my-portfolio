@@ -270,15 +270,13 @@ function App() {
             />
             <ProjectCard
               title="SYNC"
-              description="A real-time chat application that uses GraphQL subscriptions over WebSockets for live messaging and the MERN stack for the application runtime."
-              link="https://sync-beta-blue.vercel.app/"
+              description="A real-time chat app built with the MERN stack, using GraphQL subscriptions and WebSockets for live messaging." link="https://sync-beta-blue.vercel.app/"
               number="03"
               tags={["React", "GraphQL", "Node.js", "MongoDB"]}
             />
             <ProjectCard
               title="WhatsApp Bot"
-              description="A multipurpose WhatsApp group bot built with Node.js and whatsapp-web.js, focused on practical utility and command-based features (like /help) to automate everyday group tasks."
-              link="https://github.com/anshulnegi09/WhatsApp-Bot"
+              description="A Node.js WhatsApp group bot with command-based utilities for automating everyday tasks." link="https://github.com/anshulnegi09/WhatsApp-Bot"
               number="04"
               tags={["JavaScript", "Node.js", "whatsapp-web.js"]}
             />
