@@ -117,7 +117,7 @@ function App() {
               I am a Computer Science student with a focus on Cyber Security and MERN stack development. I love tackling CTF challenges and building secure systems. I'm part of Pookie Bears, a CTF team ranked in the top 50 in India on CTFtime.
             </p>
             <p className="intro-description">
-              Along with security, I enjoy creating full-stack web applications using the MERN stack. Always open to new opportunities and learning in the tech space—let's connect!
+              Along with security, I enjoy creating full-stack web applications using the MERN stack. Always open to new opportunities and learning in the tech space. Let's connect!
             </p>
             <div className="quick-links-container">
               <h3 className="quick-links-title">Quick Links</h3>
